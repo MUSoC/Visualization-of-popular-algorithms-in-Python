@@ -10,4 +10,4 @@ DFS,BFS and NP-Hard algorithms have been there for years now and it has been cod
 
 It includes:
 ### 1. DFS: 
-[DFS](/DFS/README.md)
+[DFS](/DFS)
