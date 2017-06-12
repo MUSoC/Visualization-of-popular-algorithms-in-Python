@@ -10,4 +10,4 @@ DFS,BFS and NP-Hard algorithms have been there for years now and it has been cod
 
 It includes:
 ### 1. DFS: 
- https://github.com/shettyabhi48/Visualization-of-popular-algorithms-in-Python/tree/master/DFS
+[DFS](/DFS)
