@@ -36,13 +36,11 @@ def CreateGraph(G):
 		list1=map(int,(f.readline()).split())
 		wtMatrix.append(list1)
 	source=int(f.readline()) #source vertex from where DFS has to start
-	#Graph creation
-	G = nx.Graph()
-	#Adds weight to the edges 
+	#Adds egdes along with their weights to the graph 
 	for i in range(n) :
 		for j in range(n) :
 			if wtMatrix[i][j]>0 :
-				G.add_edge(i,j,weight=wtMatrix[i][j]) 
+					G.add_edge(i,j,length=wtMatrix[i][j]) 
 	return G,source
 
 
@@ -51,27 +49,29 @@ def CreateGraph(G):
 #marks all edges traversed through DFS with red
 def DrawDFSPath(G,dfs_stk):
 	pos = nx.spring_layout(G)
-	nx.draw(G,pos)
-	labels = nx.get_edge_attributes(G,'weight')
-	nx.draw_networkx_edge_labels(G,pos,edge_labels=labels,edge_color='r',alpha=0.5 )    #prints weight on all the edges
+	nx.draw(G,pos,with_labels=True)  #with_labels=true is to show the node number in the output graph
+	edge_labels=dict([((u,v,),d['length'])
+             for u,v,d in G.edges(data=True)])
+	nx.draw_networkx_edge_labels(G, pos, edge_labels=edge_labels, label_pos=0.3, font_size=11) #prints weight on all the edges
 
 
 	for i in dfs_stk:
 		if(len(i)>1):
 			for j in i[:(len(i)-1)]:
 				if i[i.index(j)+1] in G[j]:
-					nx.draw_networkx_edges(G,pos,edgelist=[(j,i[i.index(j)+1])],width=8,alpha=0.5,edge_color='r')
+					nx.draw_networkx_edges(G,pos,edgelist=[(j,i[i.index(j)+1])],width=2.5,alpha=0.6,edge_color='r')
 				else:
 					for k in i[1::-1]: #if in case the path was reversed coz all the possible neighbours were visited, we need to find the adj node to it.
 						if k in G[j]:
-							nx.draw_networkx_edges(G,pos,edgelist=[(j,k)],width=8,alpha=0.5,edge_color='r')
+							nx.draw_networkx_edges(G,pos,edgelist=[(j,k)],width=2.5,alpha=0.6,edge_color='r')
 							break
 	plt.show()
 
 
 #main function
 if __name__== "__main__":
-	G = nx.Graph()
+	G = nx.DiGraph()
 	G,source=CreateGraph(G)
 	dfs_stk=DFS(G,source)
 	DrawDFSPath(G,dfs_stk)
+
