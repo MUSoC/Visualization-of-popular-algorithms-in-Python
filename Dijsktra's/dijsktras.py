@@ -20,15 +20,13 @@ def dijsktras(G, source, pos):
 	V = len(G.nodes()) # V denotes the number of vertices in G
 	dist = [] # dist[i] will hold the shortest distance from source to i
 	parent = [None]*V # parent[i] will hold the node from which i is reached to, in the shortest path from source
-	sptSet = [] # sptSet[i] will true if vertex i is included in shortest path tree
+	sptSet = [] # sptSet[i] will hold true if vertex i is included in shortest path tree
 	#initially, for every node, dist[] is set to maximum value and sptSet[] is set to False
 	for i in range(V):
 		dist.append(sys.maxsize)
 		sptSet.append(False)
-
 	dist[source] = 0
-	parent[source]=-1 #source is itself the root, and hence has no parent
-
+	parent[source]= -1 #source is itself the root, and hence has no parent
 	for count in range(V-1):
 		u = minDistance(dist, sptSet, V) #pick the minimum distance vectex from the set of vertices
 		sptSet[u] = True
