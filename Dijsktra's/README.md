@@ -40,7 +40,7 @@ Source node is 0.
 
 The graph, initially.
 
-![1](https://user-images.githubusercontent.com/22571531/27195116-181b8b10-5223-11e7-819e-a3db0a63356a.png)
+![1](https://user-images.githubusercontent.com/22571531/27195526-ca5dd872-5224-11e7-9b34-e669c7082a6e.png)
 
 We use the following 3 lists:
 
@@ -71,7 +71,7 @@ sptSet = [True, False, False, False, False]
 Minimum most distance of those where sptSet[i] == False, is node 1.
 Hence, the node is now included in the shorted path tree, hence sptSet[1] is set to True.
 
-![2](https://user-images.githubusercontent.com/22571531/27195060-d4f2754c-5222-11e7-9706-babaeeac2214.png)
+![2](https://user-images.githubusercontent.com/22571531/27195530-cd783296-5224-11e7-87f5-a404a94fed84.png)
 
 
 #### After the second iteration: ####
@@ -82,7 +82,7 @@ parent = [-1, 0, 1, 1, 1]
 sptSet = [True, True, False, False, False]
 ```
 
-![3](https://user-images.githubusercontent.com/22571531/27195064-d7d401e0-5222-11e7-8ecb-91968a8cdd43.png)
+![3](https://user-images.githubusercontent.com/22571531/27195531-d081e824-5224-11e7-8993-81f2dc43c30f.png)
 
 #### After the third iteration: ####
 
@@ -92,7 +92,7 @@ parent = [-1, 0, 1, 2, 1]
 sptSet = [True, True, True, False, False]
 ```
 
-![4](https://user-images.githubusercontent.com/22571531/27195066-dae595d8-5222-11e7-8b26-02401d3d7df2.png)
+![4](https://user-images.githubusercontent.com/22571531/27195536-d310f896-5224-11e7-8a75-eb5e883bc37b.png)
 
 #### After the fourth iteration: ####
 
@@ -104,4 +104,4 @@ sptSet = [True, True, True, True, False]
 
 Here, the red edges denote the shortest path from source node to the rest of the nodes.
 
-![5](https://user-images.githubusercontent.com/22571531/27195070-de609c58-5222-11e7-93e2-12091193d899.png)
+![5](https://user-images.githubusercontent.com/22571531/27195545-d8cfdf68-5224-11e7-8ee9-1b2d38e1d6ad.png)
