@@ -12,6 +12,6 @@ It includes:
 ### 1. DFS: 
 [DFS](/DFS)
 ### 2. BFS: 
-[DFS](/BFS)
+[BFS](/BFS)
 ### 3. Dijsktra's: 
-[DFS](/Dijsktra's)
+[Dijsktra's](/Dijsktra's)
