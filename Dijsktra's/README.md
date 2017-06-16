@@ -1,4 +1,4 @@
-# Visualisation of BFS traversal using networkx library
+# Visualisation of Dijsktra's algorithm using networkx library
 
 ### INPUT ###
 
