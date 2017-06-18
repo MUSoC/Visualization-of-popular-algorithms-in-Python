@@ -20,7 +20,7 @@ Sample input
 ```
 First line contains the number of nodes,say n.(Nodes are numbered as 0,1,2,...(n-1) )
 Followed by n*n weighted matrix. Disconnected egdes are represented by negative weight.
-Last line contains the source node.(i.e, the node from which the BFS should begin)
+Last line contains the source node.(i.e, the node from which the rest of the nodes should be reached)
 
 ### Draw Graph ###
 

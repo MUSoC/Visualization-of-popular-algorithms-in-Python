@@ -15,3 +15,5 @@ It includes:
 [BFS](/BFS)
 ### 3. Dijsktra's: 
 [Dijsktra's](/Dijsktra's)
+### 4. Prim's: 
+[Prim's](/Prim's)
