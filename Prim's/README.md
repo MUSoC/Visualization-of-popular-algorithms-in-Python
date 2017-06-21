@@ -10,10 +10,10 @@ Sample input
 ```
   5
   0 2 7 -1 -1
-  -1 0 3 8 5
-  -1 2 0 1 -1
-  -1 -1 -1 0 4
-  -1 -1 -1 5 0
+  2 0 3 8 5
+  7 3 0 1 -1
+  -1 8 1 0 4
+  -1 5 -1 4 0
 
 ```
 First line contains the number of nodes,say n.(Nodes are numbered as 0,1,2,...(n-1) )

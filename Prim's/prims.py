@@ -15,7 +15,7 @@ def minDistance(dist, mstSet, V):
 
 
 #function that performs prims algorithm on the graph G
-def dijsktras(G, pos):
+def prims(G, pos):
 	V = len(G.nodes()) # V denotes the number of vertices in G
 	dist = [] # dist[i] will hold the minimum weight edge value of node i to be included in MST
 	parent = [None]*V # parent[i] will hold the vertex connected to i, in the MST edge
@@ -35,7 +35,6 @@ def dijsktras(G, pos):
 				if mstSet[v] == False and G[u][v]['length'] < dist[v]:
 					dist[v] = G[u][v]['length']
 					parent[v] = u
-	#marking the minimum spanning tree with red edges
 	for X in range(V):
 		if parent[X] != -1: #ignore the parent of the starting node
 			if (parent[X], X) in G.edges():
@@ -54,7 +53,7 @@ def CreateGraph(G):
 		wtMatrix.append(list1)
 	#Adds egdes along with their weights to the graph 
 	for i in range(n) :
-		for j in range(n) :
+		for j in range(n)[i:] :
 			if wtMatrix[i][j] > 0 :
 					G.add_edge(i, j, length = wtMatrix[i][j]) 
 	return G
@@ -65,17 +64,17 @@ def CreateGraph(G):
 def DrawGraph(G):
 	pos = nx.spring_layout(G)
 	nx.draw(G, pos, with_labels = True)  #with_labels=true is to show the node number in the output graph
-	edge_labels = dict([((u, v), d['length']) for u, v, d in G.edges(data = True)])
-	nx.draw_networkx_edge_labels(G, pos, edge_labels = edge_labels, label_pos = 0.3, font_size = 11) #prints weight on all the edges
+	edge_labels = nx.get_edge_attributes(G,'length')
+	nx.draw_networkx_edge_labels(G, pos, edge_labels = edge_labels, font_size = 11) #prints weight on all the edges
 	return pos
 
 
 
 #main function
 if __name__ == "__main__":
-	G = nx.DiGraph()
+	G = nx.Graph()
 	G = CreateGraph(G)
 	pos = DrawGraph(G)
-	dijsktras(G, pos)
+	prims(G, pos)
 	plt.show()
 
