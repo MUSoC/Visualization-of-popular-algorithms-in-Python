@@ -33,7 +33,6 @@ Kruskal's algorithm is a greedy algorithm that finds a minimum spanning tree for
 The algorithm operates by adding the egdes one by one in the order of their increasing lengths, so as to form a tree. Egdes are rejected if it's addition to the tree, forms a cycle. This continues till we have V-1 egdes in the tree. (V stands for the number of vertices).
 
 To understand this better, consider the above input.
-Let the arbitrary starting node be 0.
 
 The graph, initially.
 
