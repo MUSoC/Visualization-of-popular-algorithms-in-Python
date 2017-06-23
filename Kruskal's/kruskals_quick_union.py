@@ -47,6 +47,7 @@ def kruskals(G, pos):
 	mstFlag = {} # mstFlag[i] will hold true if the edge i has been processed for MST
 	for i in [ (u, v, edata['length']) for u, v, edata in G.edges(data = True) if 'length' in edata ]:
 		mstFlag[i] = False 
+
 	parent = [None] * vLen # parent[i] will hold the vertex connected to i, in the MST
 	order = [None] * vLen	# order[i] will hold the order of appearance of the node in the MST
 	for v in range(vLen):
