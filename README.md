@@ -18,6 +18,6 @@ It includes:
 ### 4. Prim's: 
 [Prim's](/Prim's)
 ### 5. Kruskal's: 
-[Kruskal's](/Kruskal's)
+[Kruskal's] (/Kruskal's)
 ### 6. Assignment Problem: 
-[Assignment Problem](/Assignment Problem)
+[Assignment Problem] (/Assignment Problem)
