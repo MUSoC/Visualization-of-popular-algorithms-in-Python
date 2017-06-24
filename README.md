@@ -19,3 +19,5 @@ It includes:
 [Prim's](/Prim's)
 ### 5. Kruskal's: 
 [Kruskal's](/Kruskal's)
+### 5. Assignment Problem: 
+[Assignment Problem](/Assignment Problem)
