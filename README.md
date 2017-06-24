@@ -20,4 +20,4 @@ It includes:
 ### 5. Kruskal's: 
 [Kruskal's](/Kruskal's)
 ### 6. Assignment Problem: 
-[Assignment Problem](/AssignmentProblem)
+[Assignment Problem](/Assignment%20Problem)
