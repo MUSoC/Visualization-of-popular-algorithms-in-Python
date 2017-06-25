@@ -132,11 +132,11 @@ def hungarian(B ,pos ,cost):
 	augment(cost, max_match, xy, yx, lx, ly, slack, slackx)
 	for x in range(n):
  		if (x, chr(xy[x]+97)) in B.edges():
-				nx.draw_networkx_edges(B, pos, edgelist = [(x, chr(xy[x]+97))], width = 2.5, alpha = 0.6, edge_color = 'r')
+			nx.draw_networkx_edges(B, pos, edgelist = [(x, chr(xy[x]+97))], width = 2.5, alpha = 0.6, edge_color = 'r')
 
 
 
-#takes input from the file and creates a weighted graph
+#takes input from the file and creates a weighted bipartite graph
 def CreateGraph(B):
 	f = open('input.txt')
 	n = int(f.readline())
