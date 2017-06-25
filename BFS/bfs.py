@@ -21,7 +21,8 @@ def BFS(G, source, pos):
 
 
 #takes input from the file and creates a weighted graph
-def CreateGraph(G):
+def CreateGraph():
+	G = nx.DiGraph()
 	f = open('input.txt')
 	n = int(f.readline())
 	wtMatrix = []
@@ -50,8 +51,7 @@ def DrawGraph(G):
 
 #main function
 if __name__== "__main__":
-	G = nx.DiGraph()
-	G,source = CreateGraph(G)
+	G,source = CreateGraph()
 	pos = DrawGraph(G)
 	BFS(G, source, pos)
 	plt.show()

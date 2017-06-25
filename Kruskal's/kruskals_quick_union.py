@@ -47,6 +47,7 @@ def kruskals(G, pos):
 	mstFlag = {} # mstFlag[i] will hold true if the edge i has been processed for MST
 	for i in [ (u, v, edata['length']) for u, v, edata in G.edges(data = True) if 'length' in edata ]:
 		mstFlag[i] = False 
+
 	parent = [None] * vLen # parent[i] will hold the vertex connected to i, in the MST
 	order = [None] * vLen	# order[i] will hold the order of appearance of the node in the MST
 	for v in range(vLen):
@@ -71,7 +72,8 @@ def kruskals(G, pos):
 
 
 # takes input from the file and creates a weighted graph
-def CreateGraph(G):
+def CreateGraph():
+	G = nx.Graph()
 	f = open('input.txt')
 	n = int(f.readline())
 	wtMatrix = []
@@ -99,8 +101,7 @@ def DrawGraph(G):
 
 # main function
 if __name__ == "__main__":
-	G = nx.Graph()
-	G = CreateGraph(G)
+	G = CreateGraph()
 	pos = DrawGraph(G)
 	kruskals(G, pos)
 	plt.show()

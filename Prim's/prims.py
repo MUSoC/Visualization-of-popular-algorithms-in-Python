@@ -44,7 +44,8 @@ def prims(G, pos):
 
 
 #takes input from the file and creates a weighted graph
-def CreateGraph(G):
+def CreateGraph():
+	G = nx.Graph()
 	f = open('input.txt')
 	n = int(f.readline())
 	wtMatrix = []
@@ -72,8 +73,7 @@ def DrawGraph(G):
 
 #main function
 if __name__ == "__main__":
-	G = nx.Graph()
-	G = CreateGraph(G)
+	G = CreateGraph()
 	pos = DrawGraph(G)
 	prims(G, pos)
 	plt.show()
