@@ -175,8 +175,8 @@ def DrawGraph(B):
 
 #main function
 if __name__ == "__main__":
-	B = nx.DiGraph();
-	B, cost = CreateGraph(B);
+	B = nx.DiGraph()
+	B, cost = CreateGraph(B)
 	pos = DrawGraph(B)
 	hungarian(B, pos, cost)
 	plt.show()
