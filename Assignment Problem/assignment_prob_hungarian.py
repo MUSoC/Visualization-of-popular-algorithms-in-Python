@@ -137,10 +137,12 @@ def hungarian(B ,pos ,cost):
 
 
 #takes input from the file and creates a weighted bipartite graph
-def CreateGraph(B):
+def CreateGraph():
+	B = nx.DiGraph();
 	f = open('input.txt')
 	n = int(f.readline())
 	cost = []
+	
 	for i in range(n):
 		list1 = map(int, (f.readline()).split())
 		cost.append(list1)
@@ -175,8 +177,7 @@ def DrawGraph(B):
 
 #main function
 if __name__ == "__main__":
-	B = nx.DiGraph()
-	B, cost = CreateGraph(B)
+	B, cost = CreateGraph();
 	pos = DrawGraph(B)
 	hungarian(B, pos, cost)
 	plt.show()

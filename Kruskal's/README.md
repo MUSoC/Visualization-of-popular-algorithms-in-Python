@@ -17,7 +17,7 @@ Sample input
 
 ```
 First line contains the number of nodes,say n.(Nodes are numbered as 0,1,2,...(n-1) )
-Followed by n*n weighted matrix. Disconnected egdes are represented by negative weight.
+Followed by n*n weighted matrix. Disconnected edges are represented by negative weight.
 
 ### Draw Graph ###
 
