@@ -81,6 +81,7 @@ def minimumWeightedMatching(MST, G, odd_vert):
 
 
 def christofedes(G ,pos):
+	opGraph=nx.DiGraph()
 	#optimal_dist = 0
 	MST = genMinimumSpanningTree(G) # generates minimum spanning tree of graph G, using Prim's algo
 	odd_vert = [] #list containing vertices with odd degree
@@ -100,7 +101,8 @@ def christofedes(G ,pos):
 				break
 	while next != start:
 		visited[next]=True
-		nx.draw_networkx_edges(G, pos, edgelist = [(curr, next)], width = 2.5, alpha = 0.6, edge_color = 'r')
+		opGraph.add_edge(curr,next,length = G[curr][next]['length'])
+		nx.draw_networkx_edges(G, pos, arrows = True, edgelist = [(curr, next)], width = 2.5, alpha = 0.6, edge_color = 'r')
 		# optimal_dist = optimal_dist + G[curr][next]['length']
 		curr = next
 		for nd in MST.neighbors(curr):
@@ -114,9 +116,11 @@ def christofedes(G ,pos):
 					break
 		if next == curr:
 			next = start
+	opGraph.add_edge(curr,next,length = G[curr][next]['length'])
 	nx.draw_networkx_edges(G, pos, edgelist = [(curr, next)], width = 2.5, alpha = 0.6, edge_color = 'r')
 	# optimal_dist = optimal_dist + G[curr][next]['length']
 	# print optimal_dist
+	return opGraph
 
 
 
@@ -138,17 +142,20 @@ def CreateGraph():
 					G.add_edge(i, j, length = wtMatrix[i][j]) 
 	return G
 
-def DrawGraph(G):
+def DrawGraph(G,color):
 	pos = nx.spring_layout(G)
-	nx.draw(G, pos, with_labels = True)  #with_labels=true is to show the node number in the output graph
+	nx.draw(G, pos, with_labels = True, edge_color = color)  #with_labels=true is to show the node number in the output graph
 	edge_labels = nx.get_edge_attributes(G,'length')
-	nx.draw_networkx_edge_labels(G, pos, edge_labels = edge_labels, font_size = 11) #prints weight on all the edges
+	nx.draw_networkx_edge_labels(G, pos, edge_labels = edge_labels,  font_size = 11) #prints weight on all the edges
 	return pos
 
 
 #main function
 if __name__ == "__main__":
 	G = CreateGraph()
-	pos = DrawGraph(G)
-	christofedes(G, pos)
+	plt.figure(1)
+	pos = DrawGraph(G,'black')
+	opGraph = christofedes(G, pos)
+	plt.figure(2)
+	pos1 = DrawGraph(opGraph,'r') 
 	plt.show()
