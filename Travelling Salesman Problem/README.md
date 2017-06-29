@@ -79,7 +79,7 @@ Hence, odd_vert = [2,3]
 
 Step 3:
 
-SInce there are only 2 vertices in odd_vert, we get one minimum weight matching pair, i,e, (2,3). Adding this edge to MST, we have the below graph.
+Since there are only 2 vertices in odd_vert, we get one minimum weight matching pair, i,e, (2,3). Adding this edge to MST, we have the below graph.
 
 ![screenshot from 2017-06-29 12-48-48](https://user-images.githubusercontent.com/22571531/27676543-fb8d0d76-5ccb-11e7-93b9-bc7d6767b24d.png)
 
