@@ -104,6 +104,7 @@ def christofedes(G ,pos):
 		opGraph.add_edge(curr,next,length = G[curr][next]['length'])
 		nx.draw_networkx_edges(G, pos, arrows = True, edgelist = [(curr, next)], width = 2.5, alpha = 0.6, edge_color = 'r')
 		# optimal_dist = optimal_dist + G[curr][next]['length']
+		# finding the shortest Eulerian path from MST
 		curr = next
 		for nd in MST.neighbors(curr):
 			if visited[nd] == False:
