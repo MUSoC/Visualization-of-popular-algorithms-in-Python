@@ -21,3 +21,5 @@ It includes:
 [Kruskal's](/Kruskal's)
 ### 6. Assignment Problem: 
 [Assignment Problem](/Assignment%20Problem)
+### 7. Travelling Salesman Problem: 
+[Travelling Salesman Problem](/Travelling%20Salesman%20Problem)
