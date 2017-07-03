@@ -4,7 +4,7 @@
 
 Travelling salesman problem is a NP hard problem. Given a set of cities and the distance between every pair of cities, the problem is to find the shortest possible route that visits each city exactly once and returns back to the original city. Hence, it also belongs to the class of optimization problems. 
 
-Why NP-hard?
+#### Why NP-hard?
 
 First, let us understand the definition of NP- hard.
 NP (nondeterministic polynomial time) problem is the one whose solution could be verified in polynomial time but the problem is not guaranteed to be solved in polynomial time.
@@ -13,14 +13,14 @@ NP complete problem is the class of problems that are both NP and NP-hard.
 
 Let us now check both the conditions.
 
- condition (i): NP
+ ##### condition (i): NP
   To check that given solution is the right solution for a TSP problem. We need to verify two things:
   Firstly, each city must be visited exactly once. (could be done in polynomial time)
   Secondly, there is no shorter route than the current solution. (This cannot be guaranteed in polynomial time)
   Hence, TSP is not NP
 
- cndition (ii): NP hard
- 	Surely TSP is a NP hard problem. ( For, even it's solution can't be guaranteed in polynomial time)
+ ##### condition (ii): NP hard
+ Surely TSP is a NP hard problem. (For, even it's solution can't be guaranteed in polynomial time)
 
  Thus, TSP belongs to the class of NP-hard problem and not NP-complete.
 
@@ -29,7 +29,7 @@ Brute force approach for TSP will need all possible paths to be calculated which
 
 There are certain approximation algorithms for TSP which guarantees to solve the problem in polynomial time at the cost of solution not being exact. Christofides algorithm, is one such heuristics approach which guarantees it's solution to be within a factor of 1.5 of the optimal solution. By far, Christofides algorithm (time complexity : O(n^3)) is known to have the best approximation ratio for a general TSP problem. 
 
-Christofides algorithm:
+#### Christofides algorithm:
 
 1. Create a minimum spanning tree MST of G. (using Kruskal's or Prim's algorithm)
 2. Let odd_vert be the set of vertices with odd degree in MST. The number of vertices with odd_degree is guaranteed to be even( Proof: Handshaking Lemma).
@@ -79,7 +79,7 @@ Hence, odd_vert = [2,3]
 
 Step 3:
 
-SInce there are only 2 vertices in odd_vert, we get one minimum weight matching pair, i,e, (2,3). Adding this edge to MST, we have the below graph.
+Since there are only 2 vertices in odd_vert, we get one minimum weight matching pair, i,e, (2,3). Adding this edge to MST, we have the below graph.
 
 ![screenshot from 2017-06-29 12-48-48](https://user-images.githubusercontent.com/22571531/27676543-fb8d0d76-5ccb-11e7-93b9-bc7d6767b24d.png)
 
@@ -92,6 +92,6 @@ Finding the shortest hamiltonian circuit from the above graph (by skipping alrea
 ```
 
 The below diagram shows the shortest route for TSP. 
-PS: The arrows here are just for visual purposes to denote the route. The cycle could be traveresed in any direction.
+PS: The arrows here are just for visual purposes to denote the route. The cycle could be traversed in any direction.
 
 ![second](https://user-images.githubusercontent.com/22571531/27676549-01632fc8-5ccc-11e7-964e-eece9960b4b8.png)
