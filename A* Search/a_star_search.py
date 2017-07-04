@@ -17,8 +17,9 @@ def aStarSearchUtil(G, v, visited, final_path, dest, goal, dist_so_far):
 		return goal
 	visited[v] = True
 	final_path.append(v)
-	if len(final_path)>1 :
-		dist_so_far = dist_so_far + float(G[final_path[len(final_path)-1]][final_path[len(final_path)-2]]['length'])
+	len_so_far = len(final_path)
+	if len_so_far>1 :
+		dist_so_far = dist_so_far + float(G[final_path[len_so_far-1]][final_path[len_so_far-2]]['length'])
 	if v == dest:
 		goal = 1
 	else:
