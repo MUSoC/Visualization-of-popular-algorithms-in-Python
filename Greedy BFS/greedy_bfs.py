@@ -20,13 +20,13 @@ def greedyBFSUtil(G, v, visited, final_path, dest, flag):
 	if v == dest:
 		flag = 1
 	else:
-		list1 = []
+		pq_list = []
 		pq,size = getPriorityQueue(G[v])
 		for i in range(size):
-			list1.append(pq.get().description)
-		for i in list1:
+			pq_list.append(pq.get().description)
+		for i in pq_list:
 			if flag != 1:
-				print "current city:", i
+				#print "current city:", i
 				if visited[i] == False :
 					flag = greedyBFSUtil(G, i, visited, final_path, dest, flag)
 	return flag
@@ -63,8 +63,8 @@ def getHeuristics(G):
 	heuristics = {}
 	f = open('heuristics.txt')
 	for i in G.nodes():
-		list1 = f.readline().split()
-		heuristics[list1[0]] = list1[1]
+		node_heuristic_val = f.readline().split()
+		heuristics[node_heuristic_val[0]] = node_heuristic_val[1]
 	return heuristics
 
 
@@ -75,8 +75,8 @@ def CreateGraph():
 	f = open('input.txt')
 	n = int(f.readline())
 	for i in range(n):
-		list1 = f.readline().split()
-		G.add_edge(list1[0], list1[1], length = list1[2]) 
+		graph_edge_list = f.readline().split()
+		G.add_edge(graph_edge_list[0], graph_edge_list[1], length = graph_edge_list[2]) 
 	source, dest= f.read().splitlines()
 	return G, source, dest
 
