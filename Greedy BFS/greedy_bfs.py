@@ -12,24 +12,24 @@ def getPriorityQueue(list):
 
 
 
-def greedyBFSUtil(G, v, visited, final_path, dest, flag): 
-	if flag == 1:
-		return flag
+def greedyBFSUtil(G, v, visited, final_path, dest, goal): 
+	if goal == 1:
+		return goal
 	visited[v] = True
 	final_path.append(v)
 	if v == dest:
-		flag = 1
+		goal = 1
 	else:
 		pq_list = []
 		pq,size = getPriorityQueue(G[v])
 		for i in range(size):
 			pq_list.append(pq.get().description)
 		for i in pq_list:
-			if flag != 1:
+			if goal != 1:
 				#print "current city:", i
 				if visited[i] == False :
-					flag = greedyBFSUtil(G, i, visited, final_path, dest, flag)
-	return flag
+					goal = greedyBFSUtil(G, i, visited, final_path, dest, goal)
+	return goal
 
 
  
@@ -38,7 +38,7 @@ def greedyBFS(G, source, dest, heuristics, pos):
 	for node in G.nodes():
 		visited[node] = False
  	final_path = []
-	flag = greedyBFSUtil(G, source, visited, final_path, dest, 0)
+	goal = greedyBFSUtil(G, source, visited, final_path, dest, 0)
 	prev = -1
 	for var in final_path:
 		if prev != -1:
@@ -90,7 +90,7 @@ def DrawPath(G, source, dest):
 	values = [val_map.get(node, 'blue') for node in G.nodes()]
 	nx.draw(G, pos, with_labels = True, node_color = values, edge_color = 'b' ,width = 1, alpha = 0.7)  #with_labels=true is to show the node number in the output graph
 	edge_labels = dict([((u, v,), d['length']) for u, v, d in G.edges(data = True)])
-	nx.draw_networkx_edge_labels(G, pos, edge_labels = edge_labels, label_pos = 0.3, font_size = 11) #prints weight on all the edges
+	nx.draw_networkx_edge_labels(G, pos, edge_labels = edge_labels, label_pos = 0.5, font_size = 11) #prints weight on all the edges
 	return pos
 
 
