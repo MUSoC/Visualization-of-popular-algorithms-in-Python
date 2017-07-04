@@ -23,6 +23,8 @@ Heuristic functions are clearly problem-specific.
 
 Let us understand this better through an example. 
 
+![Romania map](https://user-images.githubusercontent.com/22571531/27821959-ac69755a-60c1-11e7-8286-951cd1c0437f.png)
+
 Source: Artificial Intelligence A Modern Approach
         by Stuart J. Russell and Peter Norvig 
 
