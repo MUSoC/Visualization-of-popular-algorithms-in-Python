@@ -43,7 +43,7 @@ def greedyBFS(G, source, dest, heuristics, pos):
 	for var in final_path:
 		if prev != -1:
 			curr = var
-			nx.draw_networkx_edges(G, pos, edgelist = [(prev,curr)], width = 2.5, alpha = 0.6, edge_color = 'black')
+			nx.draw_networkx_edges(G, pos, edgelist = [(prev,curr)], width = 2.5, alpha = 0.8, edge_color = 'black')
 			prev = curr
 		else:
 			prev = var
@@ -88,7 +88,7 @@ def DrawPath(G, source, dest):
 	val_map[source] = 'green'
 	val_map[dest] = 'red'
 	values = [val_map.get(node, 'blue') for node in G.nodes()]
-	nx.draw(G, pos, with_labels = True, node_color = values, edge_color = 'b' ,width = 1, alpha = 0.5)  #with_labels=true is to show the node number in the output graph
+	nx.draw(G, pos, with_labels = True, node_color = values, edge_color = 'b' ,width = 1, alpha = 0.7)  #with_labels=true is to show the node number in the output graph
 	edge_labels = dict([((u, v,), d['length']) for u, v, d in G.edges(data = True)])
 	nx.draw_networkx_edge_labels(G, pos, edge_labels = edge_labels, label_pos = 0.3, font_size = 11) #prints weight on all the edges
 	return pos
