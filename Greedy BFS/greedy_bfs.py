@@ -12,11 +12,11 @@ def getPriorityQueue(list):
 
 
 
-def greedyBFSUtil(G, v, visited, q, dest, flag): 
+def greedyBFSUtil(G, v, visited, final_path, dest, flag): 
 	if flag == 1:
 		return flag
 	visited[v] = True
-	q.put(Ordered_Node(heuristics[v], v))
+	final_path.append(v)
 	if v == dest:
 		flag = 1
 	else:
@@ -26,9 +26,9 @@ def greedyBFSUtil(G, v, visited, q, dest, flag):
 			list1.append(pq.get().description)
 		for i in list1:
 			if flag != 1:
-				#print "current city:", i
+				print "current city:", i
 				if visited[i] == False :
-					flag = greedyBFSUtil(G, i, visited, q, dest, flag)
+					flag = greedyBFSUtil(G, i, visited, final_path, dest, flag)
 	return flag
 
 
@@ -37,17 +37,16 @@ def greedyBFS(G, source, dest, heuristics, pos):
 	visited = {}
 	for node in G.nodes():
 		visited[node] = False
- 	q = Q.PriorityQueue()
-	flag = greedyBFSUtil(G, source, visited, q, dest, 0)
+ 	final_path = []
+	flag = greedyBFSUtil(G, source, visited, final_path, dest, 0)
 	prev = -1
-	path = list(q.queue)
-	for var in path:
+	for var in final_path:
 		if prev != -1:
-			curr = var.description
+			curr = var
 			nx.draw_networkx_edges(G, pos, edgelist = [(prev,curr)], width = 2.5, alpha = 0.6, edge_color = 'black')
 			prev = curr
 		else:
-			prev = var.description
+			prev = var
 	return
 
 
