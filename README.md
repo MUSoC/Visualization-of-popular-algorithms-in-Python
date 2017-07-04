@@ -23,3 +23,5 @@ It includes:
 [Assignment Problem](/Assignment%20Problem)
 ### 7. Travelling Salesman Problem: 
 [Travelling Salesman Problem](/Travelling%20Salesman%20Problem)
+### 8. Greedy Best First Search: 
+[Greedy BFS](/Greedy%20BFS)
