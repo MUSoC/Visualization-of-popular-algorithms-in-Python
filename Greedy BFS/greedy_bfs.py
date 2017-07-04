@@ -12,24 +12,24 @@ def getPriorityQueue(list):
 
 
 
-def greedyBFSUtil(G, v, visited, final_path, dest, flag): 
-	if flag == 1:
-		return flag
+def greedyBFSUtil(G, v, visited, final_path, dest, goal): 
+	if goal == 1:
+		return goal
 	visited[v] = True
 	final_path.append(v)
 	if v == dest:
-		flag = 1
+		goal = 1
 	else:
 		pq_list = []
 		pq,size = getPriorityQueue(G[v])
 		for i in range(size):
 			pq_list.append(pq.get().description)
 		for i in pq_list:
-			if flag != 1:
+			if goal != 1:
 				#print "current city:", i
 				if visited[i] == False :
-					flag = greedyBFSUtil(G, i, visited, final_path, dest, flag)
-	return flag
+					goal = greedyBFSUtil(G, i, visited, final_path, dest, goal)
+	return goal
 
 
  
@@ -38,7 +38,7 @@ def greedyBFS(G, source, dest, heuristics, pos):
 	for node in G.nodes():
 		visited[node] = False
  	final_path = []
-	flag = greedyBFSUtil(G, source, visited, final_path, dest, 0)
+	goal = greedyBFSUtil(G, source, visited, final_path, dest, 0)
 	prev = -1
 	for var in final_path:
 		if prev != -1:
