@@ -90,7 +90,7 @@ def DrawPath(G, source, dest):
 	values = [val_map.get(node, 'blue') for node in G.nodes()]
 	nx.draw(G, pos, with_labels = True, node_color = values, edge_color = 'b' ,width = 1, alpha = 0.7)  #with_labels=true is to show the node number in the output graph
 	edge_labels = dict([((u, v,), d['length']) for u, v, d in G.edges(data = True)])
-	nx.draw_networkx_edge_labels(G, pos, edge_labels = edge_labels, label_pos = 0.3, font_size = 11) #prints weight on all the edges
+	nx.draw_networkx_edge_labels(G, pos, edge_labels = edge_labels, label_pos = 0.5, font_size = 11) #prints weight on all the edges
 	return pos
 
 
