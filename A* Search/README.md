@@ -18,6 +18,11 @@ So, at each step, the node is chosen such that sum of the above 2 parameters, th
 Starting from source city, we choose the next city such that it is in the shortest path from the source (based on the cost of the route from source) as well as the closest to the Goal city(based on the heuristics function) amongst all it's neighbours. We terminate, once we've reached the goal city.
 
 
+
+Let us understand this better through an example.
+
+![Romania map](https://user-images.githubusercontent.com/22571531/27821959-ac69755a-60c1-11e7-8286-951cd1c0437f.png)
+
 Source: Artificial Intelligence A Modern Approach
         by Stuart J. Russell and Peter Norvig 
 
