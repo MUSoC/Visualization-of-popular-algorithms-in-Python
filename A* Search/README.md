@@ -13,3 +13,47 @@ f is the sum of 2 parameters:
 2. approximate cost of reaching the goal from the given node (heuristic function)
 So, at each step, the node is chosen such that sum of the above 2 parameters, that is, f is minimal. 
 
+### Algorithm
+
+Starting from source city, we choose the next city such that it is in the shortest path from the source (based on the cost of the route from source) as well as the closest to the Goal city(based on the heuristics function) amongst all it's neighbours. We terminate, once we've reached the goal city.
+
+
+Source: Artificial Intelligence A Modern Approach
+        by Stuart J. Russell and Peter Norvig 
+
+Given here is the map of Romania with cities and distance between them. We need to find the shortest route from Arad to Bucharest. 
+
+The heurestics that we are using here is the straight-line distance from the city to the goal(Here, Bucharest). Note that, this straight line distance is obtained only by knowing the map coordinates of the 2 cities. 
+
+
+#### Input
+
+Input is taken from the file 
+```
+input.txt
+```
+
+Each line in the input is of the form 
+```
+city1 city2 dist
+```
+It denotes each element of the adjacency list. That is, dist is the distance between city1 and city2. An undireced graph is drawn depicting the map of Romania.
+Starting city: Arad
+Goal city: Bucharest
+
+Heuristics is loaded from the file
+```
+heuristics.txt
+```
+Each line is of the form
+```
+city h
+```
+'h' stands for the heuristics value(here, the straight line distnace) from the city 'city' to goal city(here, Bucharest)
+
+#### Working: 
+
+
+Here, Arad is the starting city. The first node to be expanded from Arad will be Sibiu, because it has a smaller value of f (140+253=393) than either Zerind (75+374=449_)or Timisoara(118 + 329 =447). The next node to be expanded will be Rimnicu_Vilcia, because it has a smaller f compared to other possible nodes. Similary, Pitesti is expanded next and finally Bucharest is reached.
+
+
