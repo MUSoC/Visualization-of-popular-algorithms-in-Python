@@ -4,33 +4,31 @@ import Queue as Q
  
  
 
-def getPriorityQueue(G, v, dist_so_far):
+def getPriorityQueue(G, v):
 	q = Q.PriorityQueue()
 	for node in G[v]:
-		q.put(Ordered_Node(dist_so_far+float(heuristics[node])+float(G[node][v]['length']),node))
+		q.put(Ordered_Node(float(heuristics[node])+float(G[node][v]['length']),node))
 	return q,len(G[v])
 
 
 
-def aStarSearchUtil(G, v, visited, final_path, dest, goal, dist_so_far): 
+def aStarSearchUtil(G, v, visited, final_path, dest, goal): 
 	if goal == 1:
 		return goal
 	visited[v] = True
 	final_path.append(v)
-	if len(final_path)>1 :
-		dist_so_far = dist_so_far + float(G[final_path[len(final_path)-1]][final_path[len(final_path)-2]]['length'])
 	if v == dest:
 		goal = 1
 	else:
 		pq_list = []
-		pq,size = getPriorityQueue(G, v, dist_so_far)
+		pq,size = getPriorityQueue(G, v)
 		for i in range(size):
 			pq_list.append(pq.get().description)
 		for i in pq_list:
 			if goal != 1:
 				#print "current city:", i
 				if visited[i] == False :
-					goal = aStarSearchUtil(G, i, visited, final_path, dest, goal, dist_so_far)
+					goal = aStarSearchUtil(G, i, visited, final_path, dest, goal)
 	return goal
 
 
@@ -40,8 +38,7 @@ def aStarSearch(G, source, dest, heuristics, pos):
 	for node in G.nodes():
 		visited[node] = False
  	final_path = []
- 	dist_so_far = 0.0
-	goal = aStarSearchUtil(G, source, visited, final_path, dest, 0, dist_so_far)
+	goal = aStarSearchUtil(G, source, visited, final_path, dest, 0)
 	prev = -1
 	for var in final_path:
 		if prev != -1:
