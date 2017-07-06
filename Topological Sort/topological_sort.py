@@ -15,9 +15,22 @@ def topologicalSort(G,pos):
 		for node in zero_indeg_list:
 			sorted_list.append(node)
 			G.remove_node(node)
-    		zero_indeg_list.remove(node)
-		
+			zero_indeg_list.remove(node)
+	return sorted_list
 
+		
+#takes input from the file and creates a directed graph
+def CreateResultGraph(sorted_list):
+	D = nx.DiGraph()
+	for i in range(len(sorted_list)-1): 
+	 	D.add_edge(sorted_list[i], sorted_list[i+1]) 
+	pos = nx.spring_layout(D)
+	val_map = {}
+	val_map[sorted_list[0]] = 'green'
+	val_map[sorted_list[len(sorted_list)-1]] = 'red'
+	values = [val_map.get(node, 'blue') for node in D.nodes()]
+	nx.draw(D, pos, with_labels = True, node_color =values)
+	
 
 #takes input from the file and creates a directed graph
 def CreateGraph():
@@ -46,5 +59,6 @@ if __name__== "__main__":
 	pos = DrawGraph(G)
 	plt.figure(2)
 	sorted_list = topologicalSort(G,pos)
+	CreateResultGraph(sorted_list)
 	plt.show()
 
