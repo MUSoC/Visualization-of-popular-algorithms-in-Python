@@ -2,6 +2,23 @@ import networkx as nx
 import matplotlib.pyplot as plt
  
 
+def topologicalSort(G,pos):
+	zero_indeg_list = [] 
+	sorted_list = []
+	visited = [False]*len(G.nodes())
+	while len(G.nodes())!=0:
+		for node in G.nodes():
+			if visited[node-1] == False:
+				if G.in_degree(node) == 0:
+					visited[node-1] = True
+					zero_indeg_list.append(node)
+		for node in zero_indeg_list:
+			sorted_list.append(node)
+			G.remove_node(node)
+    		zero_indeg_list.remove(node)
+		
+
+
 #takes input from the file and creates a directed graph
 def CreateGraph():
 	G = nx.DiGraph()
@@ -25,6 +42,9 @@ def DrawGraph(G):
 #main function
 if __name__== "__main__":
 	G = CreateGraph()
+	plt.figure(1)
 	pos = DrawGraph(G)
+	plt.figure(2)
+	sorted_list = topologicalSort(G,pos)
 	plt.show()
 
