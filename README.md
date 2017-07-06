@@ -27,4 +27,6 @@ It includes:
 [Greedy BFS](/Greedy%20BFS)
 ### 9. A* Search: 
 [A* Search](/A*%20Search)
+### 10. Topological Sort: 
+[Topological Sort](/Topological%20Sort)
 
