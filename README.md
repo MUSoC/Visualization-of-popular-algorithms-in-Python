@@ -25,3 +25,6 @@ It includes:
 [Travelling Salesman Problem](/Travelling%20Salesman%20Problem)
 ### 8. Greedy Best First Search: 
 [Greedy BFS](/Greedy%20BFS)
+### 9. A* Search: 
+[A* Search](/A*%20Search)
+
