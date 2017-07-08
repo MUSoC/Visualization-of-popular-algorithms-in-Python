@@ -53,6 +53,11 @@ Next, Node 4 and Node 5, both have an in-degree of 0.
 sorted_list = [1,2,3,4,5]
 Note that: [1,2,3,5,4] is also the right order.
 
+Visualization of the topologically sorted order.                              
+Green node - denotes the starting node.                                      
+Red node - denotes the final node.
+
+![2](https://user-images.githubusercontent.com/22571531/27983935-e5d92286-63e6-11e7-92f3-e45c9bbb6039.png)                                                                             
 
 
  
