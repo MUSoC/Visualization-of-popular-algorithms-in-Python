@@ -15,7 +15,7 @@ def BFS(G, source, pos):
 			if visited[i] == False:
 				queue.append(i)
 				visited[i] = True
-				nx.draw_networkx_edges(G, pos, edgelist = [(curr_node,i)], width = 2.5, alpha = 0.6, edge_color = 'r')
+				# nx.draw_networkx_edges(G, pos, edgelist = [(curr_node,i)], width = 2.5, alpha = 0.6, edge_color = 'r')
 	return
 
 

@@ -95,3 +95,8 @@ The below diagram shows the shortest route for TSP.
 PS: The arrows here are just for visual purposes to denote the route. The cycle could be traversed in any direction.
 
 ![second](https://user-images.githubusercontent.com/22571531/27676549-01632fc8-5ccc-11e7-964e-eece9960b4b8.png)
+
+#### Complexity ####
+
+Time: O(n^3)                                                          
+n - number of Nodes

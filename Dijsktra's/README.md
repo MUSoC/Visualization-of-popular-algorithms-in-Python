@@ -105,3 +105,7 @@ sptSet = [True, True, True, True, False]
 Here, the red edges denote the shortest path from source node to the rest of the nodes.
 
 ![5](https://user-images.githubusercontent.com/22571531/27195545-d8cfdf68-5224-11e7-8ee9-1b2d38e1d6ad.png)
+
+#### Complexity ####
+Time : O(V^2)                                                           
+V - number of Vertices                                
