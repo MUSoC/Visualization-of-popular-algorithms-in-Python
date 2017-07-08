@@ -31,3 +31,10 @@ Recursive DFS is performed, resulting DFS forests are stored in a stack.
 ### Visulization of DFS path ###
 
 The stack is then used to mark the DFS traversed edges with a different colour(So, as to distinguish itself from the rest).
+
+### Complexity ###
+
+Time: 0(m+n)                                                                                                        
+where m - number of edges                                                                                
+n - number of nodes                                                                                          
+
