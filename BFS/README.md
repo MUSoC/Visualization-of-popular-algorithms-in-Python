@@ -38,7 +38,7 @@ nx.draw_networkx_edges(G,pos,edgelist=[(curr_node,i)],width=2.5,alpha=0.6,edge_c
 
 ### Complexity ###
 
-Time: ** 0(m+n) **                                                                                                        
+Time: 0(m+n)                                                                                                        
 where m - number of edges                                                                                
 n - number of nodes 
 
