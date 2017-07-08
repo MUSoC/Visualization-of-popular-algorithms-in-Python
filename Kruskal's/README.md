@@ -68,3 +68,8 @@ Now we have 4 edges, hence we stop the iteration.
 Final graph, with red edges denoting the minimum spanning tree.
 
 ![5](https://user-images.githubusercontent.com/22571531/27430080-ce205b20-5764-11e7-8bca-20f452d8b20d.png)
+
+#### Complexity ####
+
+Time: O(V^2)                                                                 
+V - Number of vertices                                          

@@ -40,3 +40,8 @@ The code here,is an implementation of Hungarian algorithm.
 The resultant graph for the sample input with maximum weight matching (denoted by red edges):
 
 ![2](https://user-images.githubusercontent.com/22571531/27514224-645f8028-59a1-11e7-92b0-5f0d7f0b8b02.png)
+
+#### Complexity ####
+
+Time: O(n^3)                                                          
+n - number of people( = number of jobs)
