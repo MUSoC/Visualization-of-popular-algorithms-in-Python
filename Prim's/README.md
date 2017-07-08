@@ -103,3 +103,8 @@ mstSet = [True, True, True, True, False]
 Here, the red edges denote the Minimum Spanning Tree
 
 ![5](https://user-images.githubusercontent.com/22571531/27369450-947b6710-5675-11e7-81e3-0aff0dd4d224.png)
+
+#### Complexity ####
+
+Time: O(V^2)
+V - Number of vertices
