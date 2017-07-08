@@ -34,6 +34,10 @@ Consider the sample input below:
 3 4
 3 5
 ```
+Visualization of the input graph:
+
+![1](https://user-images.githubusercontent.com/22571531/27983933-e09f086c-63e6-11e7-9830-b63a48b829b6.png)
+
 
 Node 1 is the only node with in-degree as 0.
 Remove it from the graph, and append it to the sorted_list.
