@@ -29,4 +29,7 @@ It includes:
 [A* Search](/A*%20Search)
 ### 10. Topological Sort: 
 [Topological Sort](/Topological%20Sort)
+### 11. Graph Coloring Problem: 
+[Graph Coloring Problem](/Graph%20Coloring)
+
 
