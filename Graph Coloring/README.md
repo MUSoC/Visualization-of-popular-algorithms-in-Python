@@ -51,6 +51,12 @@ Yellow : 8, 10
 
 ![2](https://user-images.githubusercontent.com/22571531/27983935-e5d92286-63e6-11e7-92f3-e45c9bbb6039.png)
 
+#### Complexity ####
+
+Time: O(N^2 + E)                                                          
+N - number of Nodes
+E - number of Edges
+
 
 
  
