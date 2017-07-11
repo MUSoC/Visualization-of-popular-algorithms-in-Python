@@ -49,7 +49,7 @@ Purple : 1, 2, 4, 6, 9
 Green : 7
 Yellow : 8, 10
 
-![2](https://user-images.githubusercontent.com/22571531/27983935-e5d92286-63e6-11e7-92f3-e45c9bbb6039.png)
+![2](https://user-images.githubusercontent.com/22571531/28072424-9638f80a-6670-11e7-99ba-7b83ab92193c.png)
 
 #### Complexity ####
 
