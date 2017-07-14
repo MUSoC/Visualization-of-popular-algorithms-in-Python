@@ -1,6 +1,34 @@
 import networkx as nx
 import matplotlib.pyplot as plt
 import sys
+import operator
+
+
+
+def k_centers(G,n):
+	centres = []
+	cities = G.nodes()
+	#add an arbitrary node, here, the first node,to he centers list
+	centres.append((G.nodes())[0])
+	cities.remove(centres[0]) 
+	n = n-1 #since we have already added one center
+	while n!=0:
+		city_dict = {}
+		for cty in cities:
+			min_dist=float("inf")
+			for c in centres:
+				min_dist=min(min_dist,G[cty][c]['length'])
+			city_dict[cty]=min_dist
+		print city_dict
+		new_center = max(city_dict, key=lambda i: city_dict[i])
+		print new_center
+		centres.append(new_center)
+		cities.remove(new_center)
+		n = n-1
+		#new_center,_ = max(city_dict.iteritems(), key = lambda x:city_dict[x])
+		#centres.append(new_center)
+		#cities.remove(new_center)
+	print centres
 
 
 #takes input from the file and creates a weighted graph
@@ -34,6 +62,7 @@ def DrawGraph(G):
 if __name__ == "__main__":
 	G = CreateGraph()
 	pos = DrawGraph(G)
-	#prims(G, pos)
+	n = 2
+	k_centers(G, n)
 	plt.show()
 
