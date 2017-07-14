@@ -42,20 +42,20 @@ Visualization of the input graph:
 ![1](https://user-images.githubusercontent.com/22571531/28072420-93b63840-6670-11e7-8178-45c47e8fddfe.png)
 
 
-Visualization of the result after node coloring.
-Following 4 colors have been used:
-Blue : 0, 3, 5
-Purple : 1, 2, 4, 6, 9
-Green : 7
-Yellow : 8, 10
+Visualization of the result after node coloring.                                                  
+Following 4 colors have been used:                                                          
+Blue : 0, 3, 5                                                              
+Purple : 1, 2, 4, 6, 9                                                              
+Green : 7                                                                  
+Yellow : 8, 10                                                        
 
-![2](https://user-images.githubusercontent.com/22571531/27983935-e5d92286-63e6-11e7-92f3-e45c9bbb6039.png)
+![2](https://user-images.githubusercontent.com/22571531/28072424-9638f80a-6670-11e7-99ba-7b83ab92193c.png)
 
 #### Complexity ####
 
-Time: O(N^2 + E)                                                          
-N - number of Nodes
-E - number of Edges
+Time: O(N^2 + E)                                                                                                          
+N - number of Nodes                                              
+E - number of Edges                                               
 
 
 
