@@ -42,7 +42,8 @@ def CreateGraph():
 	for i in range(n) :
 		for j in range(n)[i:] :
 				G.add_edge(i, j, length = wtMatrix[i][j]) 
-	return G
+	n = int(f.readline())
+	return G,n
 
 
 
@@ -61,8 +62,7 @@ def DrawGraph(G,centers):
 
 #main function
 if __name__ == "__main__":
-	G= CreateGraph()
-	n = 3
+	G,n = CreateGraph()
 	centers = k_centers(G, n)
 	DrawGraph(G,centers)
 	plt.show()
