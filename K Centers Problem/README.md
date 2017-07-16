@@ -30,6 +30,14 @@ For the sample input below:
 6 5 12 0
 3
 ```
+Visualization of the input graph:
+
+![1](https://user-images.githubusercontent.com/22571531/28249724-dcc08a16-6a78-11e7-8fbe-21905190307e.png)
+
+Visualization of the result :                                     
+
+Here, the red colored nodes denote the centers.                                                       
+![2](https://user-images.githubusercontent.com/22571531/28249726-e1255e42-6a78-11e7-9dd2-13b4751c2939.png)
 
 
  
