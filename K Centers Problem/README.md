@@ -11,9 +11,9 @@
 
  Here, is an illustration of the simple greedy algorithm which has an approximation factor of 2. It works on the basic idea of choosing the city which is farthest from the current set of centers. 
 
- Step 1: Pick an arbitrary center,c1.
- Step 2: For every remaining cities C1,C2,.. CN-1, compute minimum distnace from the centers chosen already.
- Step 3: Pick the new center with the highest distance from already chosen centers, that is, max((dist(c1,C1),dist(c1,C2),... dist(c1,CN-1)).
+ Step 1: Pick an arbitrary center,c<sub>1</sub>.
+ Step 2: For every remaining cities C<sub>1</sub>,C<sub>2</sub>,.. C<sub>N-1</sub>, compute minimum distnace from the centers chosen already.
+ Step 3: Pick the new center with the highest distance from already chosen centers, that is, max((dist(c<sub>1</sub>,C<sub>1</sub>),dist(c<sub>1</sub>,C<sub>2</sub>),... dist(c<sub>1</sub>,C<sub>N-1</sub>)).
  Step 4: Continue this till all the k centers are found.
 
 
