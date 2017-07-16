@@ -31,7 +31,7 @@ It includes:
 [Topological Sort](/Topological%20Sort)
 ### 11. Graph Coloring Problem: 
 [Graph-Coloring Problem](/Graph%20Coloring)
-### 11. K Centers Problem: 
+### 12. K Centers Problem: 
 [K Centers Problem](/K%20Centers%20Problem)
 
 
