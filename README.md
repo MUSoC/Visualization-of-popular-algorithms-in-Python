@@ -33,5 +33,7 @@ It includes:
 [Graph-Coloring Problem](/Graph%20Coloring)
 ### 12. K Centers Problem: 
 [K Centers Problem](/K%20Centers%20Problem)
+### 13. Egocentric Network
+[Egocentric Network](/Egocentric%20Network)
 
 
