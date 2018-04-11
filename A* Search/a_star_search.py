@@ -37,7 +37,7 @@ def aStarSearch(G, source, dest, heuristics, pos):
 	visited = {}
 	for node in G.nodes():
 		visited[node] = False
- 	final_path = []
+	final_path = []
 	goal = aStarSearchUtil(G, source, visited, final_path, dest, 0)
 	prev = -1
 	for var in final_path:
