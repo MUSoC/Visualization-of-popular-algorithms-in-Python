@@ -26,7 +26,7 @@ It includes:
 ### 8. Greedy Best First Search:
 [Greedy BFS](/Greedy%20BFS)
 ### 9. A* Search:
-[A* Search](/A*%20Search)
+[A* Search](/A_star_search)
 ### 10. Topological Sort:
 [Topological Sort](/Topological%20Sort)
 ### 11. Graph Coloring Problem:
