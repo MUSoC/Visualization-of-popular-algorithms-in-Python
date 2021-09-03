@@ -27,12 +27,12 @@ def CreateGraph():
 	n = int(f.readline())
 	wtMatrix = []
 	for i in range(n):
-		list1 = map(int, (f.readline()).split())
+		list1 = list(map(int, (f.readline()).split()))
 		wtMatrix.append(list1)
 	source = int(f.readline()) #source vertex from where BFS has to start
 	#Adds egdes along with their weights to the graph 
 	for i in range(n):
-		for j in range(n):
+		for j in range(len(wtMatrix[i])):
 			if wtMatrix[i][j] > 0:
 					G.add_edge(i, j, length = wtMatrix[i][j]) 
 	return G, source
